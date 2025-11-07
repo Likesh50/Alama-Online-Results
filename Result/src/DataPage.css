@@ -1,0 +1,216 @@
+/* Root Container */
+.container {
+    max-width: 100%; /* Make the container responsive */
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 20px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+
+  }
+  
+  /* Title */
+  .title {
+    color: #4d195e;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Dropdown Section */
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    
+  }
+  
+  .dropdown-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4d195e;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-container select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    border: 1px solid #ced4da;
+  }
+  
+  /* Table Section */
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+  }
+  
+  .styled-table th {
+    background: #4d195e;
+    color: white;
+  }
+  
+  .styled-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+  }
+  
+  .styled-table tbody tr:hover {
+    background: #e9ecef;
+  }
+  
+  /* Pagination Section */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .pagination button {
+    padding: 8px 12px;
+    background: #4d195e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button:disabled {
+    background: #ced4da;
+    cursor: not-allowed;
+  }
+  
+  /* No Data Message */
+  .no-data {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-top: 20px;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .dropdown-container label {
+      font-size: 0.9rem;
+    }
+  
+    .dropdown-container select {
+      font-size: 0.9rem;
+    }
+  
+    .styled-table th,
+    .styled-table td {
+      font-size: 0.85rem;
+      padding: 8px;
+    }
+  
+    .pagination span {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .container {
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .pagination button {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+    }
+  }
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    
+    .printable-container, 
+    .printable-container * {
+      visibility: visible;
+    }
+    
+    .printable-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  
+    .print-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .print-logo {
+      max-width: 100px;
+      margin-right: 20px;
+    }
+  
+    .print-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    .print-table th, 
+    .print-table td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+  }
+  
+  .print-button-container {
+    margin-bottom: 15px;
+  }
+  
+  .print-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .print-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
