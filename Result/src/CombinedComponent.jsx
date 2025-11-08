@@ -57,7 +57,7 @@ const CombinedComponent = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if ((username === "alama2024" && password === "center2024") || 
+    if ((username === "alama2025" && password === "center2025") || 
         (username === "center@2" && password === "pass2") || 
         (username === "center@3" && password === "pass3")) {
       toast.success('Login Successful!', {
@@ -98,7 +98,7 @@ const CombinedComponent = () => {
       filtered = filtered.filter(row => row.centre_name === center);
     }
 
-    const sortPositions = ['champion', 'winner', 'runner', 'runner_1'];
+    const sortPositions = ['Champion', 'Winner', 'Runner1', 'Runner2'];
     const sortedFilteredData = filtered.sort((a, b) => {
       const positionA = a.position;
       const positionB = b.position;
